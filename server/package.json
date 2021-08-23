@@ -23,6 +23,7 @@
     "mongoose": "^5.13.8"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.12",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"

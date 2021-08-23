@@ -3,9 +3,14 @@ const app = express();
 
 const PORT = process.env.PORT || 3030;
 
+app.use(express.json())
+
+require('dotenv').config()
+
+
 // CORS Setup
 const corsOptions = {
-    origin: [process.env.DOMAIN_CLIENT || keys.domain.client, process.env.DOMAIN_SERVER || keys.domain.server],
+    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER],
     credentials: true,
 }
 const cors = require('cors')
@@ -14,8 +19,7 @@ app.use(cors(corsOptions))
 
 // Connect to MongoDB
 const mongoose = require('mongoose');
-const keys = require('./config/keys')
-const connectionURL = process.env.MONGODB_CONNECTION_STRING || keys.mongodb;
+const connectionURL = process.env.MONGODB_CONNECTION_STRING;
 
 mongoose.connect(connectionURL, {
     useNewUrlParser: true,
