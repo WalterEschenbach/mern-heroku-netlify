@@ -1,16 +1,15 @@
 const express = require('express')
 const app = express();
+app.use(express.json())
 
 const PORT = process.env.PORT || 3030;
-
-app.use(express.json())
 
 require('dotenv').config()
 
 
 // CORS Setup
 const corsOptions = {
-    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER],
+    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app/", "https://mern-heroku-netlify-server.herokuapp.com/"],
     credentials: true,
 }
 const cors = require('cors')
@@ -33,6 +32,10 @@ mongoose.connect(connectionURL, {
 
 app.get('/', (req, res) => {
     res.send('Server up and Running...')
+})
+
+app.get('/ping', (req, res) => {
+    res.send('PING!')
 })
 
 app.listen(PORT, () => {

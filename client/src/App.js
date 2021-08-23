@@ -1,7 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+import axios from 'axios'
+
 function App() {
+
+  const ping = () => {
+    axios({
+      method: 'get',
+      url: 'https://mern-heroku-netlify-server.herokuapp.com/ping',
+      withCredentials: true
+    })
+      .then((response) => {
+        console.log('Response:', response)
+      })
+      .catch((error) => {
+        console.log('Error:', error)
+      })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +26,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div onClick={ping}>
           Learn React
-        </a>
+        </div>
       </header>
     </div>
   );
