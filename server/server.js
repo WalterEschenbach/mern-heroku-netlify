@@ -3,8 +3,6 @@ const app = express();
 
 const PORT = process.env.PORT || 3030;
 
-const mongoose = require('mongoose')
-
 // Connect to MongoDB
 const mongoose = require('mongoose');
 const connectionURL = process.env.MONGODB_CONNECTION_STRING || "#";
