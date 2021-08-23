@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 3030;
 
 // Connect to MongoDB
 const mongoose = require('mongoose');
-const connectionURL = process.env.MONGODB_CONNECTION_STRING || "#";
+const keys = require('./config/keys')
+const connectionURL = process.env.MONGODB_CONNECTION_STRING || keys.mongodb;
 
 mongoose.connect(connectionURL, {
     useNewUrlParser: true,
