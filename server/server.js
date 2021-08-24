@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express();
-app.use(express.json())
 
 const PORT = process.env.PORT || 3030;
 
@@ -9,11 +8,12 @@ require('dotenv').config()
 
 // CORS Setup
 const corsOptions = {
-    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app/", "https://mern-heroku-netlify-server.herokuapp.com/"],
+    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app/", "https://mern-heroku-netlify-server.herokuapp.com/", "http://localhost:3000"],
     credentials: true,
 }
 const cors = require('cors')
 app.use(cors(corsOptions))
+app.use(express.json())
 
 
 // Connect to MongoDB

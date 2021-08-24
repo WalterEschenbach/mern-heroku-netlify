@@ -8,8 +8,11 @@ function App() {
   const ping = () => {
     axios({
       method: 'get',
-      url: 'https://mern-heroku-netlify-server.herokuapp.com/ping',
-      withCredentials: true
+      url: 'http://localhost:3030',
+      withCredentials: true,
+      headers: {
+        "Access-Control-Allow-Origin": "http://localhost:3000/"
+      }
     })
       .then((response) => {
         console.log('Response:', response)
