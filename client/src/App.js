@@ -1,9 +1,9 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-//import SignIn from '../src/components/signIn/SignIn'
+import SignIn from '../src/components/signIn/SignIn'
 import SignUp from '../src/components/signUp/SignUp'
-
-//import axios from 'axios'
+import NotFound from '../src/components/notFound/NotFound'
 
 function App() {
 
@@ -23,7 +23,13 @@ function App() {
 
   return (
     <div className="App">
-      <SignUp />
+      <Router>
+        <Switch>
+          <Route path="/signup" component={SignUp} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Router>
     </div>
   );
 }
