@@ -10,6 +10,9 @@ require('dotenv').config()
 const corsOptions = {
     origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app/", "https://mern-heroku-netlify-server.herokuapp.com/", "http://localhost:3000"],
     credentials: true,
+    headers: {
+        "Access-Control-Allow-Origin": "https://agitated-aryabhata-40a3a9.netlify.app/"
+    }
 }
 const cors = require('cors')
 app.use(cors(corsOptions))
