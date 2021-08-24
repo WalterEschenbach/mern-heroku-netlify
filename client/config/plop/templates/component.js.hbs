@@ -1,0 +1,15 @@
+import React, {useState, useEffect} from 'react'
+{{#if wantAxios}}
+import axios from 'axios'
+{{/if}}
+
+function {{pascalCase name}}() {
+const classes = useStyles();
+return (
+<div className={classes.root}>
+    {{pascalCase name}}
+</div>
+)
+}
+
+export default {{pascalCase name}}
