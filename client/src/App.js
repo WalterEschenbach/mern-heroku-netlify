@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import PrivateRoute from './components/auth/PrivateRoute'
 
 import SignIn from '../src/components/signIn/SignIn'
 import SignUp from '../src/components/signUp/SignUp'
@@ -28,7 +29,7 @@ function App() {
         <Switch>
           <Route path="/signup" component={SignUp} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/dashboard" comp={Dashboard} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
