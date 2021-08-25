@@ -31,8 +31,6 @@ mongoose.connect(connectionURL, {
     .then(() => console.log('connected to DB'))
     .catch(error => console.log(error))
 
-let Ping = require('./models/ping.model')
-
 // Routes
 
 app.get('/', (req, res) => {
