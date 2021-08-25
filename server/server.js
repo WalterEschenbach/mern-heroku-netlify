@@ -39,22 +39,11 @@ app.get('/', (req, res) => {
     res.send('Server up and Running...')
 })
 
-app.get('/ping', (req, res) => {
-    res.send('PING!')
-})
-app.post('/ping', (req, res) => {
-    console.log('body', req.body)
-    const test = req.body
-    const newPing = new Ping(test)
+const authRouter = require('./routes/auth')
+const pingRouter = require('./routes/ping')
 
-    newPing.save().then(() => {
-        console.log("PING Successful in MongoDB!")
-        res.send('PING SUCCESFUL!')
-
-    }).catch((error) => {
-        console.log('Error:', error)
-    })
-})
+app.use('/auth', authRouter);
+app.use('/ping', pingRouter);
 
 app.listen(PORT, () => {
     console.log("Server is running:", `http://localhost:${PORT}`)

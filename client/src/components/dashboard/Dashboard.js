@@ -11,7 +11,7 @@ function Dashboard() {
             url: "https://mern-heroku-netlify-server.herokuapp.com/ping",
             withCredentials: true,
             data: {
-                test: "PING 7!"
+                test: "PING 8!"
             }
         })
             .then((response) => {
