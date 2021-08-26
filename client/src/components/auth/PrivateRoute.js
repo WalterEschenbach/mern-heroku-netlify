@@ -1,23 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Redirect } from 'react-router-dom'
+import axios from 'axios'
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-//import UserProvider from '../UserProvider'
-//import { Spinner } from 'react-bootstrap'
 
 export default function PrivateRoute({ comp: Component, ...rest }) {
     const [authStatus, setAuthStatus] = useState(null)
 
-    // const data = useContext(UserProvider.context)
-
-
-    // useEffect(()=>{
-    //     if(data?.data) setAuthStatus(true)
-    //     else if(data===false) setAuthStatus(false)
-    // },[data])
-
     useEffect(() => {
-        setAuthStatus(true)
+        axios({
+            method: 'get',
+            url: "http://server.daydecider.com/ping",
+            withCredentials: true
+        })
+            .then((response) => {
+                if (response === "not logged in") {
+                    setAuthStatus(false)
+                    window.sessionStorage.removeItem('user')
+                } else {
+                    window.sessionStorage.setItem('user', JSON.stringify(response.data))
+                    setAuthStatus(true)
+                }
+                console.log('Response:', response.data)
+            })
+            .catch((error) => {
+                console.log('Error:', error)
+            })
     }, [])
 
     return (

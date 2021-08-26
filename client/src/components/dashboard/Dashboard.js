@@ -2,13 +2,18 @@ import React from 'react'
 import { useStyles } from './styles';
 import axios from 'axios'
 
+import { useAuth } from '../auth/AuthContext'
+
 function Dashboard() {
     const classes = useStyles();
+    const currentUser = useAuth();
+
+    console.log(currentUser)
 
     const ping = () => {
         axios({
             method: 'post',
-            url: "https://mern-heroku-netlify-server.herokuapp.com/ping",
+            url: "http://server.daydecider.com/ping",
             withCredentials: true,
             data: {
                 test: "PING 9!"
@@ -25,6 +30,7 @@ function Dashboard() {
     return (
         <div className={classes.root}>
             <button className={classes.pingButton} onClick={ping}>PING</button>
+            <h1>{ }</h1>
         </div>
     )
 }

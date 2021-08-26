@@ -3,7 +3,7 @@ const router = require('express').Router();
 let Ping = require('../models/ping.model')
 
 router.get('/', (req, res) => {
-    res.send('PING!')
+    res.send(req.user)
 })
 
 router.post('/', (req, res) => {
@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
 
     newPing.save().then(() => {
         console.log("PING Successful in MongoDB!")
-        res.send('PING SUCCESFUL!')
+        res.send(req.user)
     }).catch((error) => {
         console.log('Error:', error)
     })
