@@ -45,7 +45,8 @@ app.use(
             maxAge: 1000 * 60 * 60 * 24,
             domain: "https://mern-heroku-netlify-server.herokuapp.com/",
             sameSite: "none",
-            secure: true
+            secure: true,
+            path: '/'
         }
     })
 );
