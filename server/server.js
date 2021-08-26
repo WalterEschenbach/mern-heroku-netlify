@@ -61,7 +61,7 @@ require("./config/passport-config")(passport);
 // <--------ROUTES--------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 app.get('/', (req, res) => {
-    res.send(req.user)
+    res.send("Server is Up and Running...")
 })
 
 const authRouter = require('./routes/auth')
