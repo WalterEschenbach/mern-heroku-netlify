@@ -28,6 +28,7 @@ module.exports = function (passport) {
             const userInformation = {
                 username: user.username,
             };
+            console.log('deserialize user:', user)
             cb(err, user);
         });
     });

@@ -9,6 +9,7 @@ require('dotenv').config()
 
 // <--------CONNECT TO MONGODB--------------------------------------------------------------------------------------------------------------------------------------------------------->
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo');
 const connectionURL = process.env.MONGODB_CONNECTION_STRING;
 
 mongoose.connect(connectionURL, {
@@ -36,9 +37,15 @@ const cors = require('cors')
 app.use(cors(corsOptions))
 
 // Session and Authentication //
+const sessionStore = MongoStore.create({
+    mongoUrl: connectionURL,
+    collection: "sessions"
+})
+
 app.use(
     session({
         secret: "secretcode",
+        store: sessionStore,
         resave: true, // <---- unsure of this setting, need to research
         saveUninitialized: true,
         cookie: {
