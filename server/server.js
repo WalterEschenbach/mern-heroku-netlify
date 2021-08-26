@@ -43,7 +43,7 @@ app.use(
         saveUninitialized: true,
         cookie: {
             maxAge: 1000 * 60 * 60 * 24,
-            domain: "https://agitated-aryabhata-40a3a9.netlify.app/"
+            domain: "https://mern-heroku-netlify-server.herokuapp.com/"
         }
     })
 );
