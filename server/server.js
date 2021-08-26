@@ -39,14 +39,10 @@ app.use(cors(corsOptions))
 app.use(
     session({
         secret: "secretcode",
-        resave: false, // <---- unsure of this setting, need to research
+        resave: true, // <---- unsure of this setting, need to research
         saveUninitialized: true,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24,
-            domain: "https://mern-heroku-netlify-server.herokuapp.com/",
-            sameSite: "none",
-            secure: true,
-            path: '/'
+            maxAge: 1000 * 60 * 60 * 24
         }
     })
 );
