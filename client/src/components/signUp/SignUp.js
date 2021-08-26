@@ -40,7 +40,7 @@ export default function SignUp() {
         e.preventDefault()
         axios({
             method: "POST",
-            url: "https://mern-heroku-netlify-server.herokuapp.com/auth/signup",
+            url: "http://server.daydecider.com/auth/signup",
             withCredentials: true,
             data: {
                 first,
