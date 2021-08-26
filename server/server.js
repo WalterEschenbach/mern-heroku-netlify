@@ -44,7 +44,8 @@ app.use(
         cookie: {
             maxAge: 1000 * 60 * 60 * 24,
             domain: "https://mern-heroku-netlify-server.herokuapp.com/",
-            sameSite: "none"
+            sameSite: "none",
+            secure: true
         }
     })
 );
