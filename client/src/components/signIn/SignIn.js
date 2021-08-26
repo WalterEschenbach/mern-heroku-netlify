@@ -39,7 +39,7 @@ export default function SignIn() {
 
         axios({
             method: "GET",
-            url: "http://localhost:3030/auth/checkauth",
+            url: "https://mern-heroku-netlify-server.herokuapp.com/auth/checkauth",
             withCredentials: true
         })
             .then((response) => console.log("Response:", response))
@@ -51,7 +51,7 @@ export default function SignIn() {
 
         axios({
             method: "POST",
-            url: "http://localhost:3030/auth/signin",
+            url: "https://mern-heroku-netlify-server.herokuapp.com/auth/signin",
             withCredentials: true,
             data: {
                 username,
