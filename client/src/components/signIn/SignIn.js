@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,15 +12,15 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { useStyles } from './styles';
 import Container from '@material-ui/core/Container';
+import { useStyles } from './styles';
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+            <Link color="inherit" href="/">
+                DayDecider
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -26,9 +28,48 @@ function Copyright() {
     );
 }
 
-
 export default function SignIn() {
     const classes = useStyles();
+
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+
+    const onGetUser = (e) => {
+        e.preventDefault()
+
+        axios({
+            method: "GET",
+            url: "https://mern-heroku-netlify-server.herokuapp.com/auth/authcheck",
+            withCredentials: true
+        })
+            .then((response) => console.log("Response:", response))
+            .catch((error) => console.log("error:", error))
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        axios({
+            method: "POST",
+            url: "https://mern-heroku-netlify-server.herokuapp.com/auth/signin",
+            withCredentials: true,
+            data: {
+                username,
+                password
+            }
+        })
+            .then((response) => console.log("Response:", response))
+            .catch((error) => console.log("error:", error))
+    }
+
+    const onChangeUsername = (e) => {
+        e.preventDefault()
+        setUsername(e.target.value)
+    }
+    const onChangePassword = (e) => {
+        e.preventDefault()
+        setPassword(e.target.value)
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -51,6 +92,7 @@ export default function SignIn() {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        onChange={onChangeUsername}
                     />
                     <TextField
                         variant="outlined"
@@ -62,6 +104,7 @@ export default function SignIn() {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        onChange={onChangePassword}
                     />
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
@@ -73,8 +116,19 @@ export default function SignIn() {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
+                        onClick={onSubmit}
                     >
                         Sign In
+                    </Button>
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        className={classes.submit}
+                        onClick={onGetUser}
+                    >
+                        Get User
                     </Button>
                     <Grid container>
                         <Grid item xs>

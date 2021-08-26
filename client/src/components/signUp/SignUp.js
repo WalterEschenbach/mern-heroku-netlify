@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,15 +12,15 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { useStyles } from './styles';
 import Container from '@material-ui/core/Container';
+import { useStyles } from './styles';
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+            <Link color="inherit" href="/">
+                Day Decider
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -28,6 +30,48 @@ function Copyright() {
 
 export default function SignUp() {
     const classes = useStyles();
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+        axios({
+            method: "POST",
+            url: "http://https://mern-heroku-netlify-server.herokuapp.com//auth/signup",
+            withCredentials: true,
+            data: {
+                first,
+                last,
+                username,
+                password,
+                email
+            }
+        })
+            .then((response) => console.log('Response:', response))
+            .catch((error) => console.log("Error:", error))
+    }
+
+    const onChangeFirst = (e) => {
+        e.preventDefault()
+        setFirst(e.target.value)
+    }
+    const onChangeLast = (e) => {
+        e.preventDefault()
+        setLast(e.target.value)
+    }
+    const onChangeEmail = (e) => {
+        e.preventDefault()
+        setEmail(e.target.value)
+        setUsername(e.target.value)
+    }
+    const onChangePassword = (e) => {
+        e.preventDefault()
+        setPassword(e.target.value)
+    }
+
 
     return (
         <Container component="main" maxWidth="xs">
@@ -51,6 +95,7 @@ export default function SignUp() {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                onChange={onChangeFirst}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -62,6 +107,7 @@ export default function SignUp() {
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="lname"
+                                onChange={onChangeLast}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -73,6 +119,7 @@ export default function SignUp() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                onChange={onChangeEmail}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -85,6 +132,7 @@ export default function SignUp() {
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                onChange={onChangePassword}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -100,6 +148,7 @@ export default function SignUp() {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
+                        onClick={onSubmit}
                     >
                         Sign Up
                     </Button>
