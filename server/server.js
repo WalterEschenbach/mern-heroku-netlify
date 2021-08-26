@@ -22,6 +22,7 @@ mongoose.connect(connectionURL, {
 // <--------MIDDLEWARE--------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 app.use(express.json())
+app.set('trust proxy', 1)
 
 // CORS //
 const corsOptions = {
@@ -40,7 +41,10 @@ app.use(
         secret: "secretcode",
         resave: false, // <---- unsure of this setting, need to research
         saveUninitialized: true,
-        cookie: { maxAge: 1000 * 60 * 60 * 24 }
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24,
+            domain: "https://agitated-aryabhata-40a3a9.netlify.app/"
+        }
     })
 );
 app.use(passport.initialize());
