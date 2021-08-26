@@ -46,7 +46,7 @@ router.post("/signup", (req, res) => {
 });
 
 
-router.get('/checkauth', isAuthenticated, function (req, res) {
+router.get('/checkauth', function (req, res) {
     res.status(200).json(req.user);
 });
 
