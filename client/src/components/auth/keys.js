@@ -5,12 +5,12 @@ module.exports = {
             client: "http://localhost:3000",
         },
         production: {
-            server: "http://server.daydecider.com",
-            client: "http://www.daydecider.com",
+            server: "https://server.daydecider.com",
+            client: "https://www.daydecider.com",
         },
         dev: {
-            server: "http://server.daydecider.com",
-            client: "http://www.daydecider.com",
+            server: "https://server.daydecider.com",
+            client: "https://www.daydecider.com",
         }
     }
 }
