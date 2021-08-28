@@ -27,7 +27,7 @@ app.set('trust proxy', 1)
 
 // CORS //
 const corsOptions = {
-    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app", "https://mern-heroku-netlify-server.herokuapp.com", "http://localhost:3000", "http://server.daydecider.com/", "http://www.daydecider.com"],
+    origin: [process.env.DOMAIN_CLIENT, process.env.DOMAIN_SERVER, "https://agitated-aryabhata-40a3a9.netlify.app", "https://mern-heroku-netlify-server.herokuapp.com", "http://localhost:3000", "https://server.daydecider.com/", "https://www.daydecider.com"],
     methods: ['GET', 'PUT', 'POST', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
