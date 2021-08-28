@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import PrivateRoute from './components/auth/PrivateRoute'
 import { AuthProvider } from './components/auth/AuthContext'
 import SignIn from '../src/components/signIn/SignIn'
@@ -16,6 +16,10 @@ function App() {
       <AuthProvider user={user}>
         <Router>
           <Switch>
+            <Route exact path="/">
+              <Redirect to="/signin" />
+            </Route>
+
             <Route path="/signup" component={SignUp} />
             <Route path="/signin" component={SignIn} />
             <PrivateRoute path="/dashboard" comp={Dashboard} />

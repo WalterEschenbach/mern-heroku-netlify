@@ -29,8 +29,9 @@ function Dashboard() {
 
     return (
         <div className={classes.root}>
+            <h1>PRIVATE ROUTE</h1>
             <button className={classes.pingButton} onClick={ping}>PING</button>
-            <h1>{ }</h1>
+            <h1>{currentUser?.currentUser?.email}</h1>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import keys from '../auth/keys'
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -40,7 +41,7 @@ export default function SignUp() {
         e.preventDefault()
         axios({
             method: "POST",
-            url: "http://server.daydecider.com/auth/signup",
+            url: `${keys.domain.dev.server}/auth/signup`,
             withCredentials: true,
             data: {
                 first,
@@ -154,7 +155,7 @@ export default function SignUp() {
                     </Button>
                     <Grid container justifyContent="flex-end">
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href={`${keys.domain.dev.client}/signin`} variant="body2">
                                 Already have an account? Sign in
                             </Link>
                         </Grid>

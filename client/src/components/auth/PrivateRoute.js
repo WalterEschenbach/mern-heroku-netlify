@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import axios from 'axios'
+import keys from './keys'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -11,18 +12,17 @@ export default function PrivateRoute({ comp: Component, ...rest }) {
     useEffect(() => {
         axios({
             method: 'get',
-            url: "http://server.daydecider.com/ping",
+            url: `${keys.domain.dev.server}/ping`,
             withCredentials: true
         })
             .then((response) => {
-                if (response === "not logged in") {
+                if (response?.data === "not logged in") {
+                    console.log('no user logged in')
                     setAuthStatus(false)
                     window.sessionStorage.removeItem('user')
                 } else {
-                    window.sessionStorage.setItem('user', JSON.stringify(response.data))
                     setAuthStatus(true)
                 }
-                console.log('Response:', response.data)
             })
             .catch((error) => {
                 console.log('Error:', error)
@@ -40,7 +40,7 @@ export default function PrivateRoute({ comp: Component, ...rest }) {
                 }
                 case false: {
                     return <Redirect to={{
-                        pathname: '/signup',
+                        pathname: '/signin',
                         state: {
                             from: props.location
                         }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios'
+import keys from '../auth/keys'
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -30,6 +32,7 @@ function Copyright() {
 
 export default function SignIn() {
     const classes = useStyles();
+    let history = useHistory()
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -39,7 +42,7 @@ export default function SignIn() {
 
         axios({
             method: "GET",
-            url: "http://server.daydecider.com/auth/checkauth",
+            url: `${keys.domain.dev.server}/auth/checkauth`,
             withCredentials: true
         })
             .then((response) => console.log("Response:", response))
@@ -51,14 +54,20 @@ export default function SignIn() {
 
         axios({
             method: "POST",
-            url: "http://server.daydecider.com/auth/signin",
+            url: `${keys.domain.dev.server}/auth/signin`,
             withCredentials: true,
             data: {
                 username,
                 password
             }
         })
-            .then((response) => console.log("Response:", response))
+            .then((response) => {
+                console.log("Response:", response)
+                window.sessionStorage.setItem('user', JSON.stringify(response.data))
+            })
+            .then(() => {
+                history.push('/dashboard')
+            })
             .catch((error) => console.log("error:", error))
     }
 
@@ -137,7 +146,7 @@ export default function SignIn() {
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="#" variant="body2">
+                            <Link href={`${keys.domain.dev.client}/signup`} variant="body2">
                                 {"Don't have an account? Sign Up"}
                             </Link>
                         </Grid>
