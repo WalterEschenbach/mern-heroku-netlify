@@ -82,23 +82,28 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+There are many great tutorials on the MERN stack available online, however, it was difficult to find one that really addressed how to deploy a production version of your site. I created this enhanced template that focuses on one specific way that I found to accomplish publishing a full-stack web app - using the Heroku-Netlify ecosystem. This template can be cloned for future use to help new developers get up and running with production versions of their full stack MERN web applications. 
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+* Your time can be focused on the code & features that make your app unique
+* Much of the features of a MERN web app are boilerplate - this template allows you to reduce setup time for functionality common to most apps 
+* It addresses some important challenges that new developers face during deployment such as SSL, CORS, authentication, and much more
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Of course, no one template will serve all projects since your needs may be different. Thanks to anyone who may have contributed and also for any feedback provided!
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Heroku](https://www.heroku.com/)
+* [Netlify](https://www.netlify.com/)
+* [React](https://reactjs.org/)
+* [Express](https://expressjs.com/)
+* [Node](https://nodejs.org/en/)
+* [MongoDB](https://www.mongodb.com/cloud/atlas)
+* [PassportJS](http://www.passportjs.org/)
+
 
 
 
@@ -181,17 +186,12 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+* [Cors](https://github.com/expressjs/cors#readme)
+* [Plop](https://plopjs.com/)
+* [MaterialUI](https://material-ui.com/)
+* [Axios](https://github.com/axios/axios)
+* [Mongoose](https://mongoosejs.com/docs/)
+* [bcryptJS](https://github.com/dcodeIO/bcrypt.js#readme)
 
 
 
@@ -211,4 +211,4 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: client/public/mern-heroku-netlify-mobile-screenshot.png
