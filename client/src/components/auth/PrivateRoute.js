@@ -17,7 +17,7 @@ export default function PrivateRoute({ comp: Component, ...rest }) {
         })
             .then((response) => {
                 if (response?.data === "not logged in") {
-                    console.log('no user logged in')
+                    console.log('no user logged in', response)
                     setAuthStatus(false)
                     window.sessionStorage.removeItem('user')
                 } else {
