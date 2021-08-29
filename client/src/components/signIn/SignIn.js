@@ -30,7 +30,7 @@ function Copyright() {
     );
 }
 
-export default function SignIn() {
+export default function SignIn(props) {
     const classes = useStyles();
     let history = useHistory()
 
@@ -66,6 +66,8 @@ export default function SignIn() {
                 window.sessionStorage.setItem('user', JSON.stringify(response.data))
             })
             .then(() => {
+                props.setUser(JSON.parse(window.sessionStorage.getItem('user')))
+            }).then(() => {
                 history.push('/dashboard')
             })
             .catch((error) => console.log("error:", error))

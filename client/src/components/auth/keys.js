@@ -9,8 +9,8 @@ module.exports = {
             client: "https://www.daydecider.com",
         },
         dev: {
-            server: "https://server.daydecider.com",
-            client: "https://www.daydecider.com",
+            server: "http://localhost:3030",
+            client: "http://localhost:3000",
         }
     }
 }

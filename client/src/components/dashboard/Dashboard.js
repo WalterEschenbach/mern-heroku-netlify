@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStyles } from './styles';
 import axios from 'axios'
+import keys from '../auth/keys'
 
 import { useAuth } from '../auth/AuthContext'
 
@@ -12,12 +13,9 @@ function Dashboard() {
 
     const ping = () => {
         axios({
-            method: 'post',
-            url: "http://server.daydecider.com/ping",
-            withCredentials: true,
-            data: {
-                test: "PING 9!"
-            }
+            method: 'get',
+            url: `${keys.domain.dev.server}/ping`,
+            withCredentials: true
         })
             .then((response) => {
                 console.log('Response:', response)
