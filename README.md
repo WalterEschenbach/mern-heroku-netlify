@@ -82,7 +82,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great tutorials on the MERN stack available online, however, it was difficult to find one that really addressed how to deploy a production version of your site. I created this enhanced template that focuses on one specific way that I found to accomplish publishing a full-stack web app - using the Heroku-Netlify ecosystem. This template can be cloned for future use to help new developers get up and running with production versions of their full stack MERN web applications. 
+There are many great tutorials on the MERN stack available online, however, it was difficult to find one that really addressed how to deploy a production version of your site. I created this enhanced template that focuses on one specific way that I found to accomplish publishing a full-stack web app - using the Heroku-Netlify ecosystem. 
+
+This template can be cloned for future use to help new developers get up and running with production versions of their full stack MERN web applications. 
 
 Here's why:
 * Your time can be focused on the code & features that make your app unique
@@ -91,7 +93,7 @@ Here's why:
 
 Of course, no one template will serve all projects since your needs may be different. Thanks to anyone who may have contributed and also for any feedback provided!
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+A list of commonly used resources are listed in the acknowledgements.
 
 ### Built With
 
@@ -125,7 +127,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/WalterEschenbach/mern-heroku-netlify.git
    ```
 3. Install NPM packages
    ```sh
@@ -207,7 +209,7 @@ Project Link: [https://github.com/WalterEschenbach/mern-heroku-netlify](https://
 [issues-shield]: https://img.shields.io/github/issues/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
 [issues-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/issues
 [license-shield]: https://img.shields.io/github/license/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
-[license-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/blob/master/LICENSE.txt
+[license-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/WalterEschenbach
 [product-screenshot]: client/public/mern-heroku-netlify-mobile-screenshot.png
