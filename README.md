@@ -116,7 +116,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -124,19 +123,35 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/WalterEschenbach/mern-heroku-netlify.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
+   cd client
    npm install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+   ```sh
+   cd server
+   npm install
    ```
+3. Create env file `.env`
+   ```sh
+   MONGODB_CONNECTION_STRING = ""
+   DOMAIN_CLIENT = "http://localhost:3000"
+   DOMAIN_SERVER = "http://localhost:3030"
+   ```
+4. Get [Google Domain](https://domains.google/)
+5. Configure Netlify Client
+   ```sh
+   Navigate to [Netlify](https://www.netlify.com/) and grant permission to newly cloned repo
+   ```
+6. Configure Heroku server
+   ```sh
+   Navigate to [Heroku](https://www.heroku.com/)
+   ```
+
 
 
 
