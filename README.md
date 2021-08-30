@@ -95,7 +95,6 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Heroku](https://www.heroku.com/)
 * [Netlify](https://www.netlify.com/)
 * [React](https://reactjs.org/)
@@ -151,7 +150,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/WalterEschenbach/mern-heroku-netlify/issues) for a list of proposed features (and known issues).
 
 
 
@@ -178,9 +177,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Walter Eschenbach - eschenbach.walter@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/WalterEschenbach/mern-heroku-netlify](https://github.com/WalterEschenbach/mern-heroku-netlify)
 
 
 
@@ -199,16 +198,16 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[contributors-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[forks-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/network/members
+[stars-shield]: https://img.shields.io/github/stars/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[stars-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/stargazers
+[issues-shield]: https://img.shields.io/github/issues/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[issues-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/issues
+[license-shield]: https://img.shields.io/github/license/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[license-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://linkedin.com/in/WalterEschenbach
 [product-screenshot]: client/public/mern-heroku-netlify-mobile-screenshot.png
