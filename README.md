@@ -82,18 +82,18 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great tutorials on the MERN stack available online, however, it was difficult to find one that really addressed how to deploy a production version of your site. I created this enhanced template that focuses on one specific way that I found to accomplish publishing a full-stack web app - using the Heroku-Netlify ecosystem. 
+There are many great tutorials that cover the MERN stack available online; However, it was difficult to find one that really addressed how to deploy a production version of your site. I created this enhanced template that focuses on one specific way that I found to accomplish publishing a full-stack web app - using the Heroku-Netlify ecosystem. 
 
 This template can be cloned for future use to help new developers get up and running with production versions of their full stack MERN web applications. 
 
 Here's why:
 * Your time can be focused on the code & features that make your app unique
-* Much of the features of a MERN web app are boilerplate - this template allows you to reduce setup time for functionality common to most apps 
-* It addresses some important challenges that new developers face during deployment such as SSL, CORS, authentication, and much more
+* Some of the features of a MERN web app are boilerplate - this template allows you to reduce setup time for functionality common to web apps 
+* It addresses some important challenges that new developers face during deployment such as SSL, CORS, authentication, and much more...
 
 Of course, no one template will serve all projects since your needs may be different. Thanks to anyone who may have contributed and also for any feedback provided!
 
-A list of commonly used resources are listed in the acknowledgements.
+A list of commonly used resources are listed further down in the acknowledgements.
 
 ### Built With
 
@@ -156,6 +156,12 @@ To get a local copy up and running follow these simple example steps.
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
+* Plop
+* Private Route
+* React Context
+* CORS
+* MaterialUI
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 
@@ -183,7 +189,7 @@ Contributions are what make the open source community such an amazing place to l
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
