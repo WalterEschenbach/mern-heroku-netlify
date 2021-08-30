@@ -223,4 +223,4 @@ Project Link: [https://github.com/WalterEschenbach/mern-heroku-netlify](https://
 [license-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/WalterEschenbach
-[product-screenshot]: client/public/mern-heroku-netlify-mobile-screenshot.png
+[product-screenshot]: client/public/mern-heroku-netlify-desktop-screenshot.png
