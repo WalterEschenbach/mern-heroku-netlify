@@ -219,7 +219,7 @@ Project Link: [https://github.com/WalterEschenbach/mern-heroku-netlify](https://
 [stars-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/stargazers
 [issues-shield]: https://img.shields.io/github/issues/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
 [issues-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/issues
-[license-shield]: https://img.shields.io/github/license/WalterEschenbach/mern-heroku-netlify.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/WalterEschenbach/mern-heroku-netlify.svg?label=license&style=for-the-badge
 [license-url]: https://github.com/WalterEschenbach/mern-heroku-netlify/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/WalterEschenbach
