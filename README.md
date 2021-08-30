@@ -144,13 +144,9 @@ To get a local copy up and running follow these simple example steps.
    ```
 4. Get [Google Domain](https://domains.google/)
 5. Configure Netlify Client
-   ```sh
-   Navigate to [Netlify](https://www.netlify.com/) and grant permission to newly cloned repo
-   ```
+   ⋅⋅* Navigate to [Netlify](https://www.netlify.com/) and grant permission to newly cloned repo
 6. Configure Heroku server
-   ```sh
-   Navigate to [Heroku](https://www.heroku.com/)
-   ```
+   ⋅⋅* Navigate to [Heroku](https://www.heroku.com/)
 
 
 
